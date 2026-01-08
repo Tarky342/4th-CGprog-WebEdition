@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:ghpages": "tsc && VITE_BASE_URL=/4th-CGprog-WebEdition/ vite build",
+    "build:ghpages": "tsc && cross-env VITE_BASE_URL=/4th-CGprog-WebEdition/ vite build",
     "prebuild": "node scripts/optimizeImages.js",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^20.10.0",
     "canvas": "^3.2.0",
+    "cross-env": "^10.1.0",
     "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",
