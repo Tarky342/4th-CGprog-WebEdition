@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#00ff00" />
+    <title>ROBOT FRONTIER</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #000000;
+      }
+
+      canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: radial-gradient(1200px 800px at 20% 15%, #eaefff, #bdcaf4);
+        touch-action: none;
+      }
+
+      /* モーション酔い対策 */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ゲームキャンバス -->
+    <canvas id="c"></canvas>
+
+    <script type="module">
+      import { StartScreen } from "./modules/StartScreen.js";
+      import { Game } from "./modules/Game.js";
+      // import {StartScreen , Game} from "./combined-bundle.js";
+
+      // スタート画面を初期化
+      const startScreen = new StartScreen();
+
+      // ゲーム開始イベントを待つ
+      window.addEventListener("gameStart", (ev) => {
+        const game = new Game(document.getElementById("c"));
+        const autoStart = ev && ev.detail && ev.detail.autoStart;
+        game.start(Boolean(autoStart));
+      });
+    </script>
+  </body>
+</html>

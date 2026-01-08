@@ -1,0 +1,24 @@
+# 依存関係
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ビルド出力
+dist/
+build/
+*.log
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
