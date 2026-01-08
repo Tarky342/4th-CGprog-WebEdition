@@ -61,7 +61,7 @@ export const CONFIG = {
  */
 export const ENEMY_SPRITES = {
   idle: {
-    path: "/images/objects/enemy/enemy_sprite.png",
+    path: "images/objects/enemy/enemy_sprite.png",
     frameCount: 4,
     frameDelay: 0.5,
     loop: true,
@@ -74,25 +74,25 @@ export const ENEMY_SPRITES = {
  */
 export const PLAYER_SPRITES = {
   idle: {
-    path: "/images/objects/player/idle.png",
+    path: "images/objects/player/idle.png",
     frameCount: 4,
     frameDelay: 0.1,
     loop: true,
   },
   jumping: {
-    path: "/images/objects/player/jumping.png",
+    path: "images/objects/player/jumping.png",
     frameCount: 2,
     frameDelay: 0.08,
     loop: true,
   },
   falling: {
-    path: "/images/objects/player/falling.png",
+    path: "images/objects/player/falling.png",
     frameCount: 2,
     frameDelay: 0.1,
     loop: true,
   },
   dead: {
-    path: "/images/objects/player/dead.png",
+    path: "images/objects/player/dead.png",
     frameCount: 1,
     frameDelay: 0.1,
     loop: true,
@@ -107,7 +107,7 @@ export const OBJECT_TEMPLATES = [
   {
     w: 50,
     h: 50,
-    img: "/images/objects/足場_特小.png",
+    img: "images/objects/足場_特小.png",
     allowAir: true,
     allowGround: true,
     groundJitter: 12,
@@ -117,7 +117,7 @@ export const OBJECT_TEMPLATES = [
   {
     w: 80,
     h: 80,
-    img: "/images/objects/足場_小.png",
+    img: "images/objects/足場_小.png",
     allowAir: true,
     allowGround: true,
     groundJitter: 12,
@@ -127,7 +127,7 @@ export const OBJECT_TEMPLATES = [
   {
     w: 140,
     h: 100,
-    img: "/images/objects/足場_中.png",
+    img: "images/objects/足場_中.png",
     allowAir: false,
     allowGround: false,
     groundJitter: 30,
@@ -138,7 +138,7 @@ export const OBJECT_TEMPLATES = [
   {
     w: 400,
     h: 130,
-    img: "/images/objects/足場_大.png",
+    img: "images/objects/足場_大.png",
     allowAir: false,
     allowGround: false,
     groundJitter: -8,
@@ -149,7 +149,7 @@ export const OBJECT_TEMPLATES = [
   {
     w: 40,
     h: 40,
-    img: "/images/objects/enemy/enemy_sprite.png",
+    img: "images/objects/enemy/enemy_sprite.png",
     allowAir: true,
     allowGround: true,
     groundJitter: 8,
@@ -518,7 +518,7 @@ export const BACKGROUND_LAYERS = [
   {
     speed: 0,
     scale: 0.36,
-    img: "/images/backgrounds/背景_メイン.png",
+    img: "images/backgrounds/背景_メイン.png",
     mode: "single",
     anchor: "center",
   },
@@ -526,7 +526,7 @@ export const BACKGROUND_LAYERS = [
     speed: 0.15,
     scale: 0.48,
     repeatSpacing: 1.6,
-    img: "/images/backgrounds/背景_飛行機_b.png",
+    img: "images/backgrounds/背景_飛行機_b.png",
     independent: true,
     independentSpeed: 30,
   },
@@ -534,7 +534,7 @@ export const BACKGROUND_LAYERS = [
     speed: 0.1,
     scale: 0.2,
     repeatSpacing: 1.8,
-    img: "/images/backgrounds/背景_ビル群_c.png",
+    img: "images/backgrounds/背景_ビル群_c.png",
     anchor: "groundTop",
     offsetY: 110,
     prob: 1.0,
@@ -544,7 +544,7 @@ export const BACKGROUND_LAYERS = [
     speed: -0.35,
     scale: 0.45,
     repeatSpacing: 2,
-    img: "/images/backgrounds/背景_飛行機_a.png",
+    img: "images/backgrounds/背景_飛行機_a.png",
     independent: true,
     independentSpeed: -50,
   },
@@ -552,7 +552,7 @@ export const BACKGROUND_LAYERS = [
     speed: 0.3,
     scale: 0.15,
     repeatSpacing: 2.0,
-    img: "/images/backgrounds/背景_ビル群_b.png",
+    img: "images/backgrounds/背景_ビル群_b.png",
     anchor: "groundTop",
     offsetY: 90,
     prob: 1.0,
@@ -562,7 +562,7 @@ export const BACKGROUND_LAYERS = [
     speed: 0.5,
     scale: 0.25,
     repeatSpacing: 1.9,
-    img: "/images/backgrounds/背景_ビル群_a.png",
+    img: "images/backgrounds/背景_ビル群_a.png",
     anchor: "groundTop",
     offsetY: 90,
     prob: 1.0,
