@@ -1,9 +1,11 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 import imagemin from "vite-plugin-imagemin";
 
 export default defineConfig({
   root: "src",
-  base: process.env.VITE_BASE_URL || "./",
+  // Use relative base so the site works both on GitHub Pages subpaths and local preview
+  base: "./",
   publicDir: "../public",
   server: {
     port: 5500,
@@ -25,5 +27,13 @@ export default defineConfig({
     outDir: "../dist",
     emptyOutDir: true,
     assetsInlineLimit: 0,
+    rollupOptions: {
+      // Ensure Slide.html and /Slide/ redirect are emitted to dist for GitHub Pages access
+      input: {
+        main: resolve(__dirname, "src/index.html"),
+        slide: resolve(__dirname, "src/Slide.html"),
+        slideRedirect: resolve(__dirname, "src/Slide/index.html"),
+      },
+    },
   },
 });
