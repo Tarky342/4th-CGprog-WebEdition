@@ -1,16 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>Slide Redirect</title>
-  <meta http-equiv="refresh" content="0; url=../Slide.html">
-  <script>
-    // Preserve query strings and hashes when forwarding to the slide file
-    const target = `../Slide.html${window.location.search}${window.location.hash}`;
-    window.location.replace(target);
-  </script>
-</head>
-<body>
-  <p>スライドへリダイレクトしています… <a href="../Slide.html">こちら</a>をクリックしてください。</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slide Redirect</title>
+    <meta http-equiv="refresh" content="0; url=../Slide.html" />
+    <script>
+      // Preserve query strings and hashes when forwarding to the slide file
+      const target = `../Slide.html${window.location.search}${window.location.hash}`;
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <p>
+      スライドへリダイレクトしています…
+      <a href="../Slide.html">こちら</a>をクリックしてください。
+    </p>
+  </body>
 </html>
